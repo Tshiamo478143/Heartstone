@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table - The Heartstone café</title>
+    <!-- Link to my CSS file -->
+    <link rel="stylesheet" href="Heartsone.css">
+</head>
+<body>
+
+<!-- Website Header -->
+   <header>
+        <div class="container">
+            <h1>The Heartstone Café</h1>
+            <p>Artisan Coffee & Homemade Pastries</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu(part1).html" style="background-color: rgba(255,255,255,0.3);">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Book a Table</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Make a Reservation</h2>
+        <p>Planning a visit? Fill out the form below to book your table. For larger groups or special events, please note it in the message box and we'll get back to you to confirm.</p>
+
+        <!-- Enquiry Form -->
+        <form id="booking-form" action="https://formspree.io/f/your-form-id-here" method="POST">
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Your Details</legend>
+                <label for="full-name">Full Name *</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </fieldset>
+
+            <!-- Reservation Details -->
+            <fieldset>
+                <legend>Reservation Details</legend>
+                <label for="guests">Number of Guests *</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+                <label for="date">Date *</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time *</label>
+                <input type="time" id="time" name="time" min="07:00" max="18:00" required>
+            </fieldset>
+
+            <!-- Additional Information -->
+            <label for="message">Special Requests (e.g., dietary requirements, celebration)</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit Booking Request</button>
+        </form>
+        <p><small>We will contact you via email within 24 hours to confirm your booking.</small></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Heartstone café. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

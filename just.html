@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heartstone Café - Menu</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #F5F5DC; /* Cream background */
+            color: #5C4033; /* Dark brown text */
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #5C4033; /* Dark brown */
+            color: #F5F5DC; /* Cream text */
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background-color: #A95C5C; /* Accent red */
+            padding: 15px 0;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* my grid styles - fixed the typo */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease; 
+            border: 2px solid #A95C5C;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+         /* Stagger the animation for each card */
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
+        .card:nth-child(7) { animation-delay: 0.7s; }
+        .card:nth-child(8) { animation-delay: 0.8s; }
+        .card:nth-child(9) { animation-delay: 0.9s; }
+        .card:nth-child(10) { animation-delay: 1.0s; }
+
+        .card:hover{
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius:10px;
+            margin-bottom: 15px;
+        }
+
+        .card h4 {
+            margin: 15px 0 10px;
+            font-size: 20px;
+            color: #5C4033; /* Changed to match my color scheme */
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #A95C5C;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background-color: #A95C5C;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .card a:hover {
+            background-color: #5C4033;
+        }
+        
+        footer {
+            background-color: #5C4033;
+            color: #F5F5DC;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        /* Category filter */
+        .category-filter {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .category-btn {
+            background-color: #A95C5C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: #5C4033;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <div class="container">
+            <h1>The Heartstone Café</h1>
+            <p>Artisan Coffee & Homemade Pastries</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu(part1).html" style="background-color: rgba(255,255,255,0.3);">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Book a Table</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 20px; color: #5C4033;">Our Menu</h2>
+        
+        <div class="category-filter">
+            <button class="category-btn active">All</button>
+            <button class="category-btn">Coffee</button>
+            <button class="category-btn">Tea</button>
+            <button class="category-btn">Pastries</button>
+            <button class="category-btn">Lunch</button>
+        </div>
+        
+        <div class="grid">
+            <!-- Coffee Items -->
+            <div class="card" data-category="coffee">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Espresso">
+                <h4>Espresso</h4>
+                <p>Rich and bold single shot of our finest coffee</p>
+                <div class="price">R25</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <div class="card" data-category="coffee">
+                <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cappuccino">
+                <h4>Cappuccino</h4>
+                <p>Perfect balance of espresso, steamed milk, and foam</p>
+                <div class="price">R35</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <div class="card" data-category="coffee">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Latte">
+                <h4>Latte</h4>
+                <p>Smooth espresso with steamed milk and light foam</p>
+                <div class="price">R38</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <!-- Tea Items -->
+            <div class="card" data-category="tea">
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="English Breakfast Tea">
+                <h4>English Breakfast Tea</h4>
+                <p>Classic robust blend to start your day right</p>
+                <div class="price">R28</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <div class="card" data-category="tea">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Chamomile Tea">
+                <h4>Chamomile Tea</h4>
+                <p>Soothing herbal blend for relaxation</p>
+                <div class="price">R30</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <!-- Pastry Items -->
+            <div class="card" data-category="pastries">
+                <img src="VCroissants.jpg" alt="Croissant">
+                <h4>Butter Croissant</h4>
+                <p>Flaky, buttery pastry baked fresh daily</p>
+                <div class="price">R28</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <div class="card" data-category="pastries">
+                <img src="blueberry.jpg" alt="Blueberry Muffin">
+                <h4>Blueberry Muffin</h4>
+                <p>Moist muffin bursting with fresh blueberries</p>
+                <div class="price">R26</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <div class="card" data-category="pastries">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Chocolate Brownie">
+                <h4>Chocolate Brownie</h4>
+                <p>Rich, fudgy brownie with dark chocolate chunks</p>
+                <div class="price">R34</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <!-- Lunch Items -->
+            <div class="card" data-category="lunch">
+                <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Club Sandwich">
+                <h4>Club Sandwich</h4>
+                <p>Triple-decker with turkey, bacon, lettuce, and tomato</p>
+                <div class="price">R85</div>
+                <a href="#">Add to Order</a>
+            </div>
+            
+            <div class="card" data-category="lunch">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Caesar Salad">
+                <h4>Caesar Salad</h4>
+                <p>Crisp romaine with parmesan, croutons, and Caesar dressing</p>
+                <div class="price">R75</div>
+                <a href="#">Add to Order</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 The Heartstone Café. All rights reserved.</p>
+            <p>123 Coffee Street, Brew District | Open 7am-6pm Weekdays, 8am-5pm Weekends</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple category filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-btn');
+            const cards = document.querySelectorAll('.card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.textContent.toLowerCase();
+                    
+                    cards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

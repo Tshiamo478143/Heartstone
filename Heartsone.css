@@ -1,0 +1,155 @@
+/* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #F5F5DC; /* Cream background */
+            color: #5C4033; /* Dark brown text */
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #5C4033; /* Dark brown */
+            color: #F5F5DC; /* Cream text */
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background-color: #A95C5C; /* Accent red */
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* my grid styles - fixed the typo */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease; 
+            border: 2px solid #A95C5C;
+        }
+
+        .card:hover{
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius:10px;
+            margin-bottom: 15px;
+        }
+
+        .card h4 {
+            margin: 15px 0 10px;
+            font-size: 20px;
+            color: #5C4033; /* Changed to match my color scheme */
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #A95C5C;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background-color: #A95C5C;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .card a:hover {
+            background-color: #5C4033;
+        }
+        
+        footer {
+            background-color: #5C4033;
+            color: #F5F5DC;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        /* Category filter */
+        .category-filter {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .category-btn {
+            background-color: #A95C5C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: #5C4033;
+        }
+    
